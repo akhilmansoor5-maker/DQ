@@ -1,0 +1,15 @@
+<IfModule mod_mime.c>
+  AddType application/xml .xml
+  AddType text/plain .txt
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header unset Alt-Svc
+  Header always unset Alt-Svc
+</IfModule>
+
+<IfModule LiteSpeed>
+  CacheDisable public /sitemap.xml
+  CacheDisable public /sitemap.txt
+  CacheDisable public /robots.txt
+</IfModule>
